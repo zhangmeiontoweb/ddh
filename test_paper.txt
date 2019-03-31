@@ -1,0 +1,183 @@
+1
+question: Name whose youth club was FC Barcelona ?
+label: 1
+sparql: SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/youthclubs> <http://dbpedia.org/resource/FC_Barcelona>  . }
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/property/youthclubs> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/FC_Barcelona>}}']
+test_result: ['http://dbpedia.org/resource/Ilie_Sánchez', 'http://dbpedia.org/resource/Thiago_Alcântara', 'http://dbpedia.org/resource/Marc_Fernández_(footballer)', 'http://dbpedia.org/resource/Alex_Zahavi', 'http://dbpedia.org/resource/Francisco_José_Carrasco', 'http://dbpedia.org/resource/Anselmo_Eyegue', 'http://dbpedia.org/resource/Rafa_Mir', 'http://dbpedia.org/resource/Josué_Currais_Prieto', 'http://dbpedia.org/resource/Julio_Pleguezuelo', 'http://dbpedia.org/resource/Sergio_Busquets', 'http://dbpedia.org/resource/Maxi_Rolón', 'http://dbpedia.org/resource/Aitor_Cantalapiedra', 'http://dbpedia.org/resource/Isaac_Cuenca', 'http://dbpedia.org/resource/Lluís_Pujol', 'http://dbpedia.org/resource/Munir_El_Haddadi', 'http://dbpedia.org/resource/Oriol_Riera']
+
+2
+question: What are all the TV shows which are related to the ones produced by Julie Gardner?
+label: 14
+sparql: SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/executiveProducer> <http://dbpedia.org/resource/Julie_Gardner> . ?uri <http://dbpedia.org/ontology/related> ?x  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/executiveProducer> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Julie_Gardner>}}', "SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/related> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Da_Vinci's_Demons> <http://dbpedia.org/resource/Human_Nature_(Doctor_Who)> <http://dbpedia.org/resource/Blink_(Doctor_Who)> <http://dbpedia.org/resource/Cucumber_(TV_series)> <http://dbpedia.org/resource/Father's_Day_(Doctor_Who)> <http://dbpedia.org/resource/Fragments_(Torchwood)> <http://dbpedia.org/resource/To_the_Last_Man_(Torchwood)> <http://dbpedia.org/resource/Tooth_and_Claw_(Doctor_Who)> <http://dbpedia.org/resource/The_End_of_Time_(Doctor_Who)> <http://dbpedia.org/resource/Revenge_of_the_Slitheen> <http://dbpedia.org/resource/Time_Crash> <http://dbpedia.org/resource/New_Street_Law> <http://dbpedia.org/resource/Forest_of_the_Dead> <http://dbpedia.org/resource/Silence_in_the_Library> <http://dbpedia.org/resource/The_Poison_Sky> <http://dbpedia.org/resource/The_Blood_Line> <http://dbpedia.org/resource/Adrift_(Torchwood)> <http://dbpedia.org/resource/Out_of_Time_(Torchwood)> <http://dbpedia.org/resource/Sleeper_(Torchwood)> <http://dbpedia.org/resource/Smith_and_Jones_(Doctor_Who)> <http://dbpedia.org/resource/The_End_of_the_World_(Doctor_Who)> <http://dbpedia.org/resource/Dead_Man_Walking_(Torchwood)> <http://dbpedia.org/resource/End_of_Days_(Torchwood)> <http://dbpedia.org/resource/Everything_Changes_(Torchwood)> <http://dbpedia.org/resource/New_Earth> <http://dbpedia.org/resource/The_Gathering_(Torchwood)> <http://dbpedia.org/resource/Countrycide> <http://dbpedia.org/resource/They_Keep_Killing_Suzie> <http://dbpedia.org/resource/Cyberwoman> <http://dbpedia.org/resource/Invasion_of_the_Bane> <http://dbpedia.org/resource/Random_Shoes> <http://dbpedia.org/resource/The_Shakespeare_Code> <http://dbpedia.org/resource/Rose_(Doctor_Who)> <http://dbpedia.org/resource/Utopia_(Doctor_Who)> <http://dbpedia.org/resource/The_Sound_of_Drums> <http://dbpedia.org/resource/Something_Borrowed_(Torchwood)> <http://dbpedia.org/resource/The_Doctor's_Daughter> <http://dbpedia.org/resource/Dead_of_Night_(Torchwood)> <http://dbpedia.org/resource/Aliens_of_London> <http://dbpedia.org/resource/World_War_Three_(Doctor_Who)> <http://dbpedia.org/resource/The_Unquiet_Dead> <http://dbpedia.org/resource/Us_&_Them> <http://dbpedia.org/resource/Adam_(Torchwood)> <http://dbpedia.org/resource/Journey's_End_(Doctor_Who)> <http://dbpedia.org/resource/Midnight_(Doctor_Who)> <http://dbpedia.org/resource/Reset_(Torchwood)> <http://dbpedia.org/resource/Enemy_of_the_Bane> <http://dbpedia.org/resource/Getting_On_(U.S._TV_series)> <http://dbpedia.org/resource/Prisoner_of_the_Judoon> <http://dbpedia.org/resource/Doomsday_(Doctor_Who)> <http://dbpedia.org/resource/Merlin_(2008_TV_series)> <http://dbpedia.org/resource/Small_Worlds_(Torchwood)> <http://dbpedia.org/resource/The_Gift_(The_Sarah_Jane_Adventures)> <http://dbpedia.org/resource/Secrets_of_the_Stars> <http://dbpedia.org/resource/The_Day_of_the_Clown> <http://dbpedia.org/resource/The_Last_Sontaran> <http://dbpedia.org/resource/The_Temptation_of_Sarah_Jane_Smith> <http://dbpedia.org/resource/Mona_Lisa's_Revenge> <http://dbpedia.org/resource/The_Eternity_Trap> <http://dbpedia.org/resource/The_Mad_Woman_in_the_Attic> <http://dbpedia.org/resource/Escape_to_L.A.> <http://dbpedia.org/resource/Immortal_Sins> <http://dbpedia.org/resource/The_Categories_of_Life> <http://dbpedia.org/resource/The_Middle_Men> <http://dbpedia.org/resource/Dreamland_(Doctor_Who)> <http://dbpedia.org/resource/The_Mark_of_the_Berserker> <http://dbpedia.org/resource/The_New_World_(Torchwood)> <http://dbpedia.org/resource/Planet_of_the_Dead> <http://dbpedia.org/resource/The_Next_Doctor> <http://dbpedia.org/resource/The_Wedding_of_Sarah_Jane_Smith> <http://dbpedia.org/resource/The_Stolen_Earth> <http://dbpedia.org/resource/A_Day_in_the_Death> <http://dbpedia.org/resource/Doctor_Who:_Children_in_Need> <http://dbpedia.org/resource/Attack_of_the_Graske> <http://dbpedia.org/resource/Rise_of_the_Cybermen> <http://dbpedia.org/resource/The_Idiot's_Lantern> <http://dbpedia.org/resource/Fear_Her> <http://dbpedia.org/resource/Love_&_Monsters> <http://dbpedia.org/resource/Tardisode> <http://dbpedia.org/resource/The_Age_of_Steel> <http://dbpedia.org/resource/The_Impossible_Planet> <http://dbpedia.org/resource/Evolution_of_the_Daleks> <http://dbpedia.org/resource/Last_of_the_Time_Lords> <http://dbpedia.org/resource/Banana_(TV_series)> <http://dbpedia.org/resource/Intruders_(TV_series)> <http://dbpedia.org/resource/Rendition_(Torchwood)> <http://dbpedia.org/resource/The_Unicorn_and_the_Wasp> <http://dbpedia.org/resource/From_Out_of_the_Rain> <http://dbpedia.org/resource/The_Fires_of_Pompeii> <http://dbpedia.org/resource/Day_One_(Torchwood)> <http://dbpedia.org/resource/End_of_the_Road_(Torchwood)> <http://dbpedia.org/resource/Greeks_Bearing_Gifts_(Torchwood)> <http://dbpedia.org/resource/Partners_in_Crime_(Doctor_Who)> <http://dbpedia.org/resource/Planet_of_the_Ood> <http://dbpedia.org/resource/42_(Doctor_Who)> <http://dbpedia.org/resource/Meat_(Torchwood)> <http://dbpedia.org/resource/Turn_Left_(Doctor_Who)> <http://dbpedia.org/resource/Voyage_of_the_Damned_(Doctor_Who)> <http://dbpedia.org/resource/Bad_Wolf> <http://dbpedia.org/resource/Boom_Town_(Doctor_Who)> <http://dbpedia.org/resource/The_Christmas_Invasion> <http://dbpedia.org/resource/The_Doctor_Dances> <http://dbpedia.org/resource/The_Empty_Child> <http://dbpedia.org/resource/The_Long_Game> <http://dbpedia.org/resource/The_Parting_of_the_Ways> <http://dbpedia.org/resource/Army_of_Ghosts> <http://dbpedia.org/resource/School_Reunion_(Doctor_Who)> <http://dbpedia.org/resource/The_Girl_in_the_Fireplace> <http://dbpedia.org/resource/The_Satan_Pit> <http://dbpedia.org/resource/Kiss_Kiss,_Bang_Bang_(Torchwood)> <http://dbpedia.org/resource/The_Sontaran_Stratagem> <http://dbpedia.org/resource/Captain_Jack_Harkness_(Torchwood_episode)> <http://dbpedia.org/resource/Combat_(Torchwood)> <http://dbpedia.org/resource/Dalek_(Doctor_Who_episode)> <http://dbpedia.org/resource/Gridlock_(Doctor_Who)> <http://dbpedia.org/resource/Music_of_the_Spheres_(Doctor_Who)> <http://dbpedia.org/resource/The_Runaway_Bride_(Doctor_Who)> <http://dbpedia.org/resource/The_Sarah_Jane_Adventures> <http://dbpedia.org/resource/Torchwood> <http://dbpedia.org/resource/Tofu_(web_series)> <http://dbpedia.org/resource/Exit_Wounds_(Torchwood)> <http://dbpedia.org/resource/Ghost_Machine_(Torchwood)> <http://dbpedia.org/resource/Daleks_in_Manhattan> <http://dbpedia.org/resource/The_Family_of_Blood> <http://dbpedia.org/resource/The_Infinite_Quest> <http://dbpedia.org/resource/The_Lazarus_Experiment> <http://dbpedia.org/resource/Eye_of_the_Gorgon> <http://dbpedia.org/resource/The_Lost_Boy_(The_Sarah_Jane_Adventures)> <http://dbpedia.org/resource/Warriors_of_Kudlak> <http://dbpedia.org/resource/Whatever_Happened_to_Sarah_Jane%3F> <http://dbpedia.org/resource/The_Waters_of_Mars> <http://dbpedia.org/resource/From_Raxacoricofallapatorius_with_Love> }}"]
+test_result: ['http://dbpedia.org/resource/Banana_(TV_series)', 'http://dbpedia.org/resource/Tofu_(web_series)', 'http://dbpedia.org/resource/Atlantis_(TV_series)', 'http://dbpedia.org/resource/List_of_Merlin_episodes', 'http://dbpedia.org/resource/Cucumber_(TV_series)', 'http://dbpedia.org/resource/Doctor_Who', "http://dbpedia.org/resource/Sarah_Jane's_Alien_Files", 'http://dbpedia.org/resource/Wizards_vs_Aliens', 'http://dbpedia.org/resource/Torchwood', 'http://dbpedia.org/resource/Torchwood_Declassified', 'http://dbpedia.org/resource/The_Sarah_Jane_Adventures']
+
+3
+question: Name the parent company of  Ford Air Transport Service ?
+label: 1
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ford_Air_Transport_Service> <http://dbpedia.org/ontology/parentCompany> ?uri } 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/parentCompany> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Ford_Air_Transport_Service>}}']
+test_result: ['http://dbpedia.org/resource/Ford_Motor_Company']
+
+4
+question: Which destination of Emerald Air is also the city served by houston Fort Bend Airport ?
+label: 3
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Emerald_Air_(United_States)> <http://dbpedia.org/ontology/destination> ?uri. <http://dbpedia.org/resource/Houston_Fort_Bend_Airport> <http://dbpedia.org/property/cityServed> ?uri} 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/destination> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Emerald_Air_(United_States)>}}', 'SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/destination> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Columbus,_Ohio> <http://dbpedia.org/resource/Houston> }}']
+test_result: ['http://dbpedia.org/resource/Emerald_Air_(United_States)']
+
+5
+question: Who is the fictional character who portrayed in Terminator 2: Judgment Day?
+label: 1
+sparql: SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/portrayer> <http://dbpedia.org/resource/Terminator_2:_Judgment_Day>  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/portrayer> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Terminator_2:_Judgment_Day>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/portrayer> ?x. VALUES ?xntity {<http://dbpedia.org/resource/John_Connor> <http://dbpedia.org/resource/T-1000> }}']
+test_result: ['http://dbpedia.org/resource/Thomas_Dekker_(actor)', 'http://dbpedia.org/resource/Christian_Bale', 'http://dbpedia.org/resource/Michael_Edwards_(actor)', 'http://dbpedia.org/resource/Edward_Furlong', 'http://dbpedia.org/resource/Terminator_2:_Judgment_Day', 'http://dbpedia.org/resource/Terminator_3:_Rise_of_the_Machines', 'http://dbpedia.org/resource/Terminator_Genisys', 'http://dbpedia.org/resource/Terminator_Salvation', 'http://dbpedia.org/resource/Nick_Stahl', 'http://dbpedia.org/resource/Jason_Clarke_(actor)', 'http://dbpedia.org/resource/Robert_Patrick', 'http://dbpedia.org/resource/Shirley_Manson', 'http://dbpedia.org/resource/Lee_Byung-hun']
+
+6
+question: Name the rivers whose source country's capital is Lusaka?
+label: 14
+sparql: SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/capital> <http://dbpedia.org/resource/Lusaka> . ?uri <http://dbpedia.org/ontology/sourceCountry> ?x  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/River>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/capital> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Lusaka>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/capital> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Zambia> <http://dbpedia.org/resource/List_of_Zambians> <http://dbpedia.org/resource/Northern_Rhodesia> }}']
+test_result: ['http://dbpedia.org/resource/Lusaka', 'http://dbpedia.org/resource/Livingstone,_Zambia']
+
+7
+question: Who is the narrator of The Price of Beauty ?
+label: 1
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Price_of_Beauty> <http://dbpedia.org/ontology/narrator> ?uri } 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/narrator> ?x. VALUES ?xntity {<http://dbpedia.org/resource/The_Price_of_Beauty>}}']
+test_result: ['http://dbpedia.org/resource/Jessica_Simpson']
+
+8
+question: Who did Bruce Bochy play for ? 
+label: 1
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bruce_Bochy> <http://dbpedia.org/ontology/team> ?uri } 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/team> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Bruce_Bochy>}}']
+test_result: ['http://dbpedia.org/resource/San_Francisco_Giants']
+
+9
+question: Who directed the albums recorded in Anaheim?
+label: 12
+sparql: SELECT DISTINCT ?uri, ?x WHERE { ?x <http://dbpedia.org/ontology/recordedIn> <http://dbpedia.org/resource/Anaheim,_California> . ?x <http://dbpedia.org/property/director> ?uri  . ?x <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Album>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/recordedIn> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Anaheim,_California>}}', "SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/recordedIn> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Stage_(Great_White_album)> <http://dbpedia.org/resource/Death_Alive> <http://dbpedia.org/resource/Live_at_the_House_of_Blues_(Thrice_album)> <http://dbpedia.org/resource/This_Is_Love,_This_Is_Murderous> <http://dbpedia.org/resource/Lit_(album)> <http://dbpedia.org/resource/The_Wild_Frontier> <http://dbpedia.org/resource/Kill_It_Live> <http://dbpedia.org/resource/Before_the_Blackout> <http://dbpedia.org/resource/Fenix_TX_(album)> <http://dbpedia.org/resource/No_Parole_from_Rock_'n'_Roll> <http://dbpedia.org/resource/Songs_of_the_Heart> <http://dbpedia.org/resource/Lovers_Live> <http://dbpedia.org/resource/How_You_Sell_Soul_to_a_Soulless_People_Who_Sold_Their_Soul%3F> <http://dbpedia.org/resource/Set_It_Off_(Thousand_Foot_Krutch_album)> <http://dbpedia.org/resource/The_Adventures_of_Mimi_(video)> <http://dbpedia.org/resource/%22Unplugged%22_Live> }}"]
+test_result: ['http://dbpedia.org/resource/Anaheim,_California', 'http://dbpedia.org/resource/World_Class_Audio', 'http://dbpedia.org/resource/Fullerton,_California', 'http://dbpedia.org/resource/Nashville,_Tennessee', 'http://dbpedia.org/resource/Costa_Mesa,_California', 'http://dbpedia.org/resource/Whitefield_Studios', 'http://dbpedia.org/resource/Los_Angeles,_California', 'http://dbpedia.org/resource/The_Music_Grinder', 'http://dbpedia.org/resource/Asaph_Studios', 'http://dbpedia.org/resource/Bill_Schnee_Studio', 'http://dbpedia.org/resource/Burbank,_California', 'http://dbpedia.org/resource/Topanga,_California', 'http://dbpedia.org/resource/Huntington_Beach,_California', 'http://dbpedia.org/resource/The_Green_Room_(recording_studio)', 'http://dbpedia.org/resource/Desert_Moon_Studios', 'http://dbpedia.org/resource/The_Forum_(Inglewood)', 'http://dbpedia.org/resource/Inglewood,_California', 'http://dbpedia.org/resource/Honda_Center', 'http://dbpedia.org/resource/Ontario,_Canada']
+
+10
+question: What is the parent company of company which owns Sony Bank?
+label: 14
+sparql: SELECT DISTINCT ?uri, ?x WHERE { <http://dbpedia.org/resource/Sony_Bank> <http://dbpedia.org/property/parent> ?x . ?x <http://dbpedia.org/ontology/parentCompany> ?uri  . ?x <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company>}
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/parentCompany> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Sony_Bank>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/parentCompany> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Sony_Financial> }}']
+test_result: ['http://dbpedia.org/resource/Sony']
+
+11
+question: Name the commanders of military conflicts where Roundhead was one of the commander ?
+label: 12
+sparql: SELECT DISTINCT ?uri, ?x WHERE { ?x <http://dbpedia.org/property/commander> <http://dbpedia.org/resource/Roundhead_(Wyandot)> . ?x <http://dbpedia.org/ontology/commander> ?uri  . ?x <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryConflict>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/commander> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Roundhead_(Wyandot)>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/commander> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Battle_of_Frenchtown> <http://dbpedia.org/resource/Siege_of_Fort_Meigs> }}']
+test_result: ['http://dbpedia.org/resource/Henry_Procter_(British_Army_officer)', 'http://dbpedia.org/resource/James_Winchester', 'http://dbpedia.org/resource/Roundhead_(Wyandot)', 'http://dbpedia.org/resource/George_Madison', 'http://dbpedia.org/resource/Walk-in-the-Water', 'http://dbpedia.org/resource/William_Henry_Harrison', 'http://dbpedia.org/resource/Tecumseh', 'http://dbpedia.org/resource/William_Dudley_(colonel)', 'http://dbpedia.org/resource/Green_Clay']
+
+12
+question: What movies have been written by authors of Monty Python ?
+label: 1
+sparql: SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/writer> <http://dbpedia.org/resource/Monty_Python>  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/writer> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Monty_Python>}}', "SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/writer> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Monty_Python_Live_at_the_Hollywood_Bowl> <http://dbpedia.org/resource/Monty_Python's_The_Meaning_of_Life> }}"]
+test_result: ['http://dbpedia.org/resource/Marty_Feldman', 'http://dbpedia.org/resource/Tim_Brooke-Taylor', 'http://dbpedia.org/resource/Monty_Python', 'http://dbpedia.org/resource/David_Lipscomb']
+
+13
+question: Who is a religious figure titled superior general?
+label: 1
+sparql: SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/title> <http://dbpedia.org/resource/Superior_general>  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Religious>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/property/title> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Superior_general>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/property/title> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Mother_Teresa> }}']
+test_result: ['http://dbpedia.org/resource/Ramon_Magsaysay_Award', 'http://dbpedia.org/resource/Templeton_Prize', 'http://dbpedia.org/resource/Superior_general', 'http://dbpedia.org/resource/Nobel_Peace_Prize', 'http://dbpedia.org/resource/Bharat_Ratna', 'Awards for Mother Teresa', 'Superior General of the Missionaries of Charity']
+
+14
+question: Name the sports played by Fr. Agnel Multipurpose School and Junior College?
+label: 1
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Fr._Agnel_Multipurpose_School_and_Junior_College> <http://dbpedia.org/ontology/sport> ?uri } 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/sport> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Fr._Agnel_Multipurpose_School_and_Junior_College>}}']
+test_result: ['http://dbpedia.org/resource/Throwball', 'http://dbpedia.org/resource/Association_football', 'http://dbpedia.org/resource/Chess', 'http://dbpedia.org/resource/Hockey']
+
+15
+question: Does Silver Airways have a hub at the Washington Dulles International Airport?
+label: 15
+sparql: ASK WHERE { <http://dbpedia.org/resource/Silver_Airways> <http://dbpedia.org/ontology/hubAirport> <http://dbpedia.org/resource/Washington_Dulles_International_Airport> }
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/hubAirport> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Silver_Airways>}}']
+test_result: ['http://dbpedia.org/resource/Washington_Dulles_International_Airport', 'http://dbpedia.org/resource/Tampa_International_Airport', 'http://dbpedia.org/resource/Orlando_International_Airport', 'http://dbpedia.org/resource/Fort_Lauderdale-Hollywood_International_Airport']
+
+16
+question: What ingredients are used in preparing the dish of Ragout fin?
+label: 1
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ragout_fin> <http://dbpedia.org/ontology/ingredient> ?uri } 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/ingredient> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Ragout_fin>}}']
+test_result: ['http://dbpedia.org/resource/Butter', 'http://dbpedia.org/resource/Sweetbread', 'http://dbpedia.org/resource/Tongue', 'http://dbpedia.org/resource/Veal', 'http://dbpedia.org/resource/Roux', 'http://dbpedia.org/resource/Brain', 'http://dbpedia.org/resource/Bone_marrow', 'http://dbpedia.org/resource/Fish', 'http://dbpedia.org/resource/Button_mushroom', 'http://dbpedia.org/resource/Chicken_(food)', 'http://dbpedia.org/resource/Egg_yolk']
+
+17
+question: Name the company whose products is Boeing F/A-18E/F Super Hornet and key person is Raymond Conner?
+label: 2
+sparql: SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Boeing_F/A-18E/F_Super_Hornet> . ?uri <http://dbpedia.org/ontology/keyPerson> <http://dbpedia.org/resource/Raymond_Conner>  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/keyPerson> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Raymond_Conner>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/keyPerson> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Boeing> <http://dbpedia.org/resource/Boeing_Commercial_Airplanes> }}']
+test_result: ['http://dbpedia.org/resource/Dennis_Muilenburg', 'http://dbpedia.org/resource/Raymond_Conner', 'http://dbpedia.org/resource/CEO', 'http://dbpedia.org/resource/President']
+
+18
+question: Name everyone working for a company owned by Roman Abramovich.
+label: 14
+sparql: SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/owningCompany> <http://dbpedia.org/resource/Roman_Abramovich> . ?uri <http://dbpedia.org/ontology/occupation> ?x  . }
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/occupation> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Roman_Abramovich>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/owningCompany> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Evraz> <http://dbpedia.org/resource/Norilsk_Nickel> <http://dbpedia.org/resource/Chelsea_F.C.> <http://dbpedia.org/resource/Millhouse_Capital> }}']
+test_result: ['http://dbpedia.org/resource/Roman_Abramovich', 'http://dbpedia.org/resource/Oleg_Deripaska', 'http://dbpedia.org/resource/Vladimir_Potanin']
+
+19
+question: What is the total number of other restingplace of the politicians whose one of the restingplace is East Norwalk Historical Cemetery?
+label: 12
+sparql:  SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/restingplace> <http://dbpedia.org/resource/East_Norwalk_Historical_Cemetery> . ?x <http://dbpedia.org/property/restingplace> ?uri }
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/property/restingplace> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/East_Norwalk_Historical_Cemetery>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/property/restingplace> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Matthias_Sention_Jr.> <http://dbpedia.org/resource/Matthias_Sention_Sr.> }}']
+test_result: ['http://dbpedia.org/resource/Connecticut', 'http://dbpedia.org/resource/East_Norwalk_Historical_Cemetery', 'http://dbpedia.org/resource/Norwalk,_Connecticut']
+
+20
+question: Who is the authority of Maine School of Science and Mathematics ?
+label: 1
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Maine_School_of_Science_and_Mathematics> <http://dbpedia.org/ontology/authority> ?uri } 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/authority> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Maine_School_of_Science_and_Mathematics>}}']
+test_result: ['http://dbpedia.org/resource/State_of_Maine']
+
+21
+question: Name the movies directed by Stanley Kubrick and edited by Anthony Harvey?
+label: 2
+sparql: SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/Stanley_Kubrick> . ?uri <http://dbpedia.org/property/editing> <http://dbpedia.org/resource/Anthony_Harvey>  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/director> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Stanley_Kubrick>}}', 'SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/director> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Anthony_Harvey>}}']
+test_result: []
+
+22
+question: Who developed the software which is used as operating system of Magic Trackpad ?
+label: 14
+sparql: SELECT DISTINCT ?uri, ?x WHERE { <http://dbpedia.org/resource/Magic_Trackpad> <http://dbpedia.org/ontology/operatingSystem> ?x . ?x <http://dbpedia.org/property/developer> ?uri  . ?x <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Software>}
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/operatingSystem> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Magic_Trackpad>}}', 'SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/operatingSystem> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Mac_OS_X_Snow_Leopard> }}']
+test_result: ['http://dbpedia.org/resource/Plex_(software)', 'http://dbpedia.org/resource/SuperCopier', 'http://dbpedia.org/resource/QuickTime', 'http://dbpedia.org/resource/DAZ_Studio', 'http://dbpedia.org/resource/FaceTime', 'http://dbpedia.org/resource/CCleaner', 'http://dbpedia.org/resource/Graphisoft_BIM_Server', 'http://dbpedia.org/resource/Graphisoft_EcoDesigner', 'http://dbpedia.org/resource/Graphisoft_MEP_Modeler', 'http://dbpedia.org/resource/Magic_Trackpad', 'http://dbpedia.org/resource/Bryce_(software)', 'http://dbpedia.org/resource/ACDSee', 'http://dbpedia.org/resource/Liquid_Spins']
+
+23
+question: Which location city of the Denver Broncos is the palce of birth of Steven Clark Cunningham ?
+label: 3
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Denver_Broncos> <http://dbpedia.org/ontology/locationCity> ?uri. <http://dbpedia.org/resource/Steven_Clark_Cunningham> <http://dbpedia.org/ontology/birthPlace> ?uri} 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/locationCity> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Denver_Broncos>}}', 'SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/birthPlace> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Steven_Clark_Cunningham>}}']
+test_result: ['http://dbpedia.org/resource/Denver']
+
+24
+question: Do Ctenochaetus Binotatus lie in the cActinopterygii class?
+label: 15
+sparql: ASK WHERE { <http://dbpedia.org/resource/Ctenochaetus_binotatus> <http://dbpedia.org/ontology/class> <http://dbpedia.org/resource/Actinopterygii> }
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/class> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Ctenochaetus_binotatus>}}']
+test_result: ['http://dbpedia.org/resource/Actinopterygii']
+
+25
+question: List TV shows with producer as Erik Bork and company is DreamWorks Television ?
+label: 2
+sparql: SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/company> <http://dbpedia.org/resource/DreamWorks_Television> . ?uri <http://dbpedia.org/ontology/producer> <http://dbpedia.org/resource/Erik_Bork>  . ?uri <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+test_sparql: ['SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/company> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/DreamWorks_Television>}}', 'SELECT distinct ?x WHERE { ?x <http://dbpedia.org/ontology/producer> ?xntity VALUES ?xntity {<http://dbpedia.org/resource/Erik_Bork>}}']
+test_result: ['http://dbpedia.org/resource/Band_of_Brothers_(miniseries)']
+
+26
+question: What is the Ceremonial County of Port of Tilbury ?
+label: 1
+sparql:  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Port_of_Tilbury> <http://dbpedia.org/ontology/ceremonialCounty> ?uri } 
+test_sparql: ['SELECT distinct ?x WHERE { ?xntity <http://dbpedia.org/ontology/ceremonialCounty> ?x. VALUES ?xntity {<http://dbpedia.org/resource/Port_of_Tilbury>}}']
+test_result: ['http://dbpedia.org/resource/Essex']
+
+
